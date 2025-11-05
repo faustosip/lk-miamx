@@ -9,10 +9,7 @@
       },
       "type": "n8n-nodes-base.webhook",
       "typeVersion": 2.1,
-      "position": [
-        0,
-        0
-      ],
+      "position": [0, 0],
       "id": "3495df5f-20dd-4bf2-86d5-30f6cc86dc2d",
       "name": "Webhook",
       "webhookId": "4062b7c1-79b2-4359-a1f0-34ed3d52e8e4"
@@ -33,10 +30,7 @@
       },
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
-      "position": [
-        208,
-        0
-      ],
+      "position": [208, 0],
       "id": "b48071fb-972f-4a64-a3d9-65a8b770bea1",
       "name": "Edit Fields"
     },
@@ -47,10 +41,7 @@
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [
-        416,
-        0
-      ],
+      "position": [416, 0],
       "id": "1cf354f5-83ae-432e-b1dd-ae6579ef9731",
       "name": "Code"
     },
@@ -65,10 +56,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
-      "position": [
-        592,
-        192
-      ],
+      "position": [592, 192],
       "id": "6257e0b5-1fee-4aa6-a43b-ff1adb75eeb4",
       "name": "OpenAI Chat Model",
       "credentials": {
@@ -86,10 +74,7 @@
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 2.2,
-      "position": [
-        624,
-        -16
-      ],
+      "position": [624, -16],
       "id": "66711835-ed0a-488f-89f5-63d948ceb103",
       "name": "AI Agent"
     },
@@ -109,10 +94,7 @@
       },
       "type": "n8n-nodes-base.googleCalendarTool",
       "typeVersion": 1.3,
-      "position": [
-        784,
-        192
-      ],
+      "position": [784, 192],
       "id": "8b4357cc-dcde-49ba-a96c-392f37d5b825",
       "name": "Create an event in Google Calendar",
       "credentials": {

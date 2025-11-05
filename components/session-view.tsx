@@ -49,13 +49,17 @@ export const SessionView = ({
 
   useEffect(() => {
     if (sessionStarted) {
+      console.log('Session started, current agentState:', agentState);
+      
       const timeout = setTimeout(() => {
+        console.log('Timeout reached, checking agentState:', agentState);
         if (!isAgentAvailable(agentState)) {
           const reason =
             agentState === 'connecting'
               ? 'Agent did not join the room. '
               : 'Agent connected but did not complete initializing. ';
 
+          console.log('Agent not available, disconnecting. Reason:', reason);
           toastAlert({
             title: 'Session ended',
             description: (
@@ -74,12 +78,19 @@ export const SessionView = ({
             ),
           });
           room.disconnect();
+        } else {
+          console.log('Agent is available, keeping connection');
         }
-      }, 20_000);
+      }, 60_000); // Increased to 60 seconds for debugging
 
       return () => clearTimeout(timeout);
     }
   }, [agentState, sessionStarted, room]);
+
+  // Add logging for agentState changes
+  useEffect(() => {
+    console.log('AgentState changed to:', agentState);
+  }, [agentState]);
 
   const { supportsChatInput, supportsVideoInput, supportsScreenShare } = appConfig;
   const capabilities = {

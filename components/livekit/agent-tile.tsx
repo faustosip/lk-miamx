@@ -24,9 +24,9 @@ export const AgentTile = ({
       >
         <span
           className={cn([
-            'bg-muted min-h-4 w-4 rounded-full',
+            'min-h-4 w-4 rounded-full bg-cyan-400/30',
             'origin-center transition-colors duration-250 ease-linear',
-            'data-[lk-highlighted=true]:bg-foreground data-[lk-muted=true]:bg-muted',
+            'data-[lk-highlighted=true]:bg-cyan-400 data-[lk-muted=true]:bg-cyan-400/20',
           ])}
         />
       </BarVisualizer>
