@@ -7,7 +7,6 @@ interface AppLayoutProps {
 
 export default async function AppLayout({ children }: AppLayoutProps) {
   const hdrs = await headers();
-  // Removemos las variables que no se están usando
   await getAppConfig(hdrs);
 
   return (
