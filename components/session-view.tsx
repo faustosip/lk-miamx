@@ -50,7 +50,7 @@ export const SessionView = ({
   useEffect(() => {
     if (sessionStarted) {
       console.log('Session started, current agentState:', agentState);
-      
+
       const timeout = setTimeout(() => {
         console.log('Timeout reached, checking agentState:', agentState);
         if (!isAgentAvailable(agentState)) {
