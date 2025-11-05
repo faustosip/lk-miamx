@@ -162,7 +162,9 @@ export function App({ appConfig }: AppProps) {
                       <p className="text-sm font-medium text-white">
                         👋 ¡Hola! Soy mIA, tu asistente virtual
                       </p>
-                      <p className="mt-1 text-xs text-gray-300">Presiona "Agendar" para comenzar</p>
+                      <p className="mt-1 text-xs text-gray-300">
+                        Presiona &quot;Agendar&quot; para comenzar
+                      </p>
                     </div>
                   </div>
                 </div>
