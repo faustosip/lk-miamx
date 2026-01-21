@@ -35,28 +35,6 @@ const IconPhone = () => (
   </svg>
 );
 
-const IconWifiOff = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="lucide lucide-wifi-off h-5 w-5 text-gray-400"
-  >
-    <path d="M12 20h.01" />
-    <path d="M8.5 16.429a5 5 0 0 1 7 0" />
-    <path d="M5 12.859a10 10 0 0 1 5.17-2.69" />
-    <path d="M19 12.859a10 10 0 0 0-2.007-1.523" />
-    <path d="M2 8.82a15 15 0 0 1 4.177-2.643" />
-    <path d="M22 8.82a15 15 0 0 0-11.288-3.764" />
-    <path d="m2 2 20 20" />
-  </svg>
-);
 // --- FIN: Iconos ---
 
 interface AppProps {
@@ -140,9 +118,7 @@ export function App({ appConfig }: AppProps) {
               m<span className="neon-text sophia-glow text-cyan-300">IA</span>
             </span>
           </h1>
-          <p className="text-center text-lg text-gray-400">
-            Agenda con tu voz.
-          </p>
+          <p className="text-center text-lg text-gray-400">Agenda con tu voz.</p>
         </header>
         <div className="relative z-10 mx-auto max-w-4xl space-y-6">
           <div className="avatar-container relative rounded-xl border border-cyan-500/20 bg-black/40 backdrop-blur-sm">
@@ -165,10 +141,14 @@ export function App({ appConfig }: AppProps) {
             <button
               onClick={() => setSessionStarted(true)}
               disabled={sessionStarted}
-              className="btn-primary flex transform items-center space-x-4 rounded-full bg-slate-800 border border-slate-700 px-8 py-6 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-slate-700 disabled:opacity-50"
+              className="btn-primary flex transform items-center space-x-4 rounded-full border border-slate-700 bg-slate-800 px-8 py-6 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-slate-700 disabled:opacity-50"
             >
               <IconPhone />
-              <span className="leading-tight text-left">Presiona aquí<br/>para comenzar</span>
+              <span className="text-left leading-tight">
+                Presiona aquí
+                <br />
+                para comenzar
+              </span>
             </button>
           </div>
         </div>

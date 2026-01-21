@@ -34,7 +34,7 @@ export const Welcome = ({
         {startButtonText}
       </Button>
 
-      <footer className="fixed bottom-8 left-0 right-0 flex justify-center">
+      <footer className="fixed right-0 bottom-8 left-0 flex justify-center">
         <p className="text-sm text-cyan-300/60">
           © Todos los derechos reservados - Suplente MX 2026
         </p>
