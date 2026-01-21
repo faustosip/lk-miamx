@@ -140,8 +140,8 @@ export function App({ appConfig }: AppProps) {
               m<span className="neon-text sophia-glow text-cyan-300">IA</span>
             </span>
           </h1>
-          <p className="text-center text-lg text-cyan-300/80">
-            Agenda con tu voz. mIA está escuchando.
+          <p className="text-center text-lg text-gray-400">
+            Agenda con tu voz.
           </p>
         </header>
         <div className="relative z-10 mx-auto max-w-4xl space-y-6">
@@ -156,53 +156,34 @@ export function App({ appConfig }: AppProps) {
                   className="object-cover"
                   sizes="100vw"
                 />
-                <div className="absolute inset-0 bg-black/20">
-                  <div className="absolute right-4 bottom-4 left-4">
-                    <div className="rounded-lg bg-black/60 p-3 backdrop-blur-sm">
-                      <p className="text-sm font-medium text-white">
-                        👋 ¡Hola! Soy mIA, tu asistente virtual
-                      </p>
-                      <p className="mt-1 text-xs text-gray-300">
-                        Presiona &quot;Agendar&quot; para comenzar
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="pointer-events-none absolute inset-0">
-                  <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
-                  <div className="absolute bottom-0 left-0 h-1 w-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
-                </div>
               </div>
-            </div>
-            <div className="absolute top-4 right-4 flex items-center space-x-2 rounded-full bg-black/60 px-3 py-2 backdrop-blur-sm">
-              <IconWifiOff />
-              <span className="text-sm font-medium">Disconnected</span>
             </div>
           </div>
 
           {/* --- ¡BOTÓN FUNCIONAL! --- */}
           <div className="flex justify-center">
             <button
-              onClick={() => setSessionStarted(true)} // <-- ¡AQUÍ ESTÁ LA MAGIA!
-              disabled={sessionStarted} // Deshabilita el botón al hacer clic
-              className="btn-primary flex transform items-center space-x-4 rounded-full px-12 py-6 text-xl font-bold text-white shadow-[0_0_40px_rgba(6,182,212,0.4)] transition-all duration-300 hover:scale-105 disabled:opacity-50"
+              onClick={() => setSessionStarted(true)}
+              disabled={sessionStarted}
+              className="btn-primary flex transform items-center space-x-4 rounded-full bg-slate-800 border border-slate-700 px-8 py-6 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-slate-700 disabled:opacity-50"
             >
               <IconPhone />
-              <span>Agendar</span>
+              <span className="leading-tight text-left">Presiona aquí<br/>para comenzar</span>
             </button>
           </div>
         </div>
-        <div className="neon-text mt-8 text-center text-sm">
-          © 2025{' '}
+        <div className="mt-8 flex items-center justify-center gap-2 text-center text-sm text-gray-500">
+          <span>© Todos los derechos reservados -</span>
           <a
             href="https://suplente.mx/reservas/"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-cyan-300"
           >
-            suplente.mx
-          </a>{' '}
-          – Todos los derechos reservados.
+            Suplente MX
+          </a>
+          <span>2026</span>
+          <span className="text-cyan-400">✦</span>
         </div>
       </motion.div>
       {/* --- FIN: Tu Portada Personalizada --- */}
