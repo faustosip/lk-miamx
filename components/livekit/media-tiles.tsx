@@ -119,7 +119,10 @@ export function MediaTiles({ chatOpen }: MediaTilesProps) {
   const agentLayoutTransition = transition;
   const avatarLayoutTransition = transition;
 
-  const isAvatar = agentVideoTrack !== undefined;
+  // DEMO: video del avatar oculto temporalmente — forzamos modo solo-audio
+  // (visualizer de sonido de LiveKit). Para reactivar el avatar, restaurar:
+  // const isAvatar = agentVideoTrack !== undefined;
+  const isAvatar = false;
 
   return (
     <div className="pointer-events-none fixed inset-x-0 top-8 bottom-32 z-50 md:top-12 md:bottom-40">
